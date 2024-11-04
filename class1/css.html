@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css class 2</title>
+
+
+ <style>
+
+/* element selector*/
+p{
+ background-color: black;
+  color: white;  
+}
+
+/*ID selector*/
+
+#heading4{
+  text-align: center; 
+ /* font-size: 16px;*/
+}
+
+.heading_four{
+  text-align: start;
+  font-size: 50px;
+}
+
+
+/* class selector*/
+.class_heading{
+  letter-spacing: 5px;
+}
+
+/*universal selector*/
+*{
+  /*font-family:'sagoe UI', 'arial', 'calibri','sans-serif';*/
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+ /* background-color: chocolate;*/
+}
+
+
+/*attributes selector*/
+input[type="number"]{
+padding:50px;
+border: 2px solid brown;
+}
+
+
+/*CSS GROUP SELECTOR*/
+h1, h2, input, p{
+  font-size: 50px;
+}
+
+
+
+/*child selector*/
+
+ol > li{
+  text-decoration: underline;
+}
+
+/* specificity*/
+/*specificity determines the order of priority for applyling styles*/
+
+/* 1) High*/
+
+/*
+############Inline styling#########
+
+*/
+
+
+/* 2) medium*/
+
+/*
+IDS
+*/
+
+/* 3) normal*/
+
+/* 
+classes, pseudo-classes, attributes selectors
+*/
+
+/* 4) low*/
+
+/*
+elements,pseudo-elements
+*/
+
+
+/* PSEUDO-CLASS LIKE :HOVER,: VISITED,: CHECKED,: FOCUS*/
+#second_paragraph:hover{
+background-color: chartreuse;
+}
+
+input:focus{
+border: 4px solid yellow;
+}
+
+/*pseudo element*/
+
+li::before{
+  content:" A typical country in africa is " ;
+  color: blue;
+}
+
+#second_paragraph::after{
+  content:", this is a new content." ;
+  background-color: crimson;
+}
+
+#box_model{
+  width: 200px;
+  height: 200px;
+  border:5px solid gray ;
+  padding: 50px;
+  margin: 50px;
+}
+
+/* true width :the width plus padding left plus padding right plus border left plus border right;
+left plus border right;
+200px+ 50px + 50px+ 50px +
+*/
+
+
+</style>
+
+
+</head>
+
+<body>
+
+
+<!--inline styling-->
+<!--styling with the style tag within the head tag-->
+<!--styling using an external stylesheet-->
+
+<ol id="list">
+  <li class="list_items">nig<span style="color: chocolate;">eria</span></li>
+  <li class="list_items">kenya</li>
+  <li class="list_items">cameroon</li>
+  <li class="list_items">cote D'Ivoire</li>
+</ol>
+
+
+  <div>
+    
+  <!--inline styling-->  
+<p style="color: brown; font-size: 30px; text-transform: uppercase; background-color: blueviolet;">
+    This is a paragraph
+</p>
+
+<p id="second_paragraph"> This is a second paragraph </p>
+<h4 id="heading4" class="heading_four">This heading demonstrates ID styling </h4>
+
+
+<h5 class="class_heading"> this is a heading that demonstrates the Class styling</h5>
+
+<input type="text"/>
+<input type="number"/>
+<input type="password"/>
+
+  </div>  
+
+<!--DIFFERENCE BETWEEN AND ID AND A CLASS :ids must be unique across your HTML page 
+while class can have a repitition -->
+
+<!--BOX MODEL AND LAYOUT-->
+
+<div id="box_model">
+this is my content
+</div>
+
+</body>
+</html>
